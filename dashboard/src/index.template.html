@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Markdown 학습 기록으로 만든 개인 OPIc 성장 대시보드">
+  <title>나의 OPIc 성장 기록</title>
+  <style>{{STYLE}}</style>
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">1 DAY · 1 OPIc</p>
+        <h1>나의 OPIc 성장 기록</h1>
+        <p class="hero-copy">말한 만큼 선명해지는 나의 영어 습관</p>
+      </div>
+      <div class="period-switch" aria-label="조회 기간">
+        <button type="button" data-period="all" aria-pressed="true">전체</button>
+        <button type="button" data-period="7" aria-pressed="false">최근 7회</button>
+      </div>
+    </header>
+
+    <section class="summary-grid" aria-label="학습 요약">
+      <article class="summary primary"><span>완료한 연습</span><strong id="completed-count">0</strong><small>sessions</small></article>
+      <article class="summary"><span>연속 학습</span><strong id="streak-count">0</strong><small>days</small></article>
+      <article class="summary"><span>새 표현</span><strong id="vocabulary-count">0</strong><small>expressions</small></article>
+      <article class="summary"><span>주간 리뷰까지</span><strong id="review-count">0</strong><small>sessions</small></article>
+    </section>
+
+    <section class="dashboard-grid">
+      <article class="panel score-panel">
+        <div class="panel-heading">
+          <div><p class="section-kicker">SKILL BALANCE</p><h2>영역별 성장 추이</h2></div>
+          <p>5점 척도 · 연습용 추정</p>
+        </div>
+        <div id="score-legend" class="legend" aria-label="점수 항목"></div>
+        <div id="score-chart" class="chart" role="img" aria-label="세션별 영역 점수 변화"></div>
+      </article>
+
+      <article class="panel activity-panel">
+        <div class="panel-heading"><div><p class="section-kicker">CONSISTENCY</p><h2>학습 리듬</h2></div></div>
+        <div id="calendar" class="calendar"></div>
+        <div id="activity-note" class="activity-note"></div>
+      </article>
+
+      <article class="panel mistakes-panel">
+        <div class="panel-heading"><div><p class="section-kicker">FOCUS</p><h2>반복해서 다듬을 점</h2></div></div>
+        <div id="mistake-chart" class="mistake-chart"></div>
+      </article>
+
+      <article class="panel mission-panel">
+        <div class="panel-heading"><div><p class="section-kicker">MISSIONS</p><h2>미션 진행</h2></div></div>
+        <div id="mission-chart" class="mission-chart"></div>
+        <div id="current-mission" class="current-mission"></div>
+      </article>
+    </section>
+
+    <section class="sessions-section">
+      <div class="section-heading"><div><p class="section-kicker">SESSION ARCHIVE</p><h2>연습 기록</h2></div><p>세션을 선택해 원문과 개선본을 비교하세요.</p></div>
+      <div class="session-layout">
+        <nav id="session-list" class="session-list" aria-label="연습 세션 목록"></nav>
+        <article id="session-detail" class="session-detail" aria-live="polite"></article>
+      </div>
+    </section>
+
+    <section class="vocabulary-section">
+      <div class="section-heading"><div><p class="section-kicker">MY EXPRESSIONS</p><h2>나만의 표현</h2></div><p>말하다 막혔던 순간을 다음 답변의 재료로 바꿉니다.</p></div>
+      <div id="vocabulary-list" class="vocabulary-list"></div>
+    </section>
+
+    <footer>마지막 생성 {{BUILT_AT}} · Markdown 기록 기준</footer>
+  </main>
+  <script id="opic-data" type="application/json">{{DATA}}</script>
+  <script>{{SCRIPT}}</script>
+</body>
+</html>

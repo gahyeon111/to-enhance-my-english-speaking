@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.venv/
+
+# Personal learning data. Keep the adjacent *.example.md files public.
+profile/learner-profile.md
+progress/progress.md
+topics/topic-history.md
+vocabulary/vocabulary.md
+sessions/*.md
+!sessions/*.example.md
+
+# Rebuilt from the Markdown sources.
+dashboard/generated/
